@@ -1,5 +1,4 @@
-// Select color input
-let color = $("#pickColor").val();
+// Using cached vars for selectors to increase optimization.
 var gridCanvas = $('#gridCanvas');
 var pickColor = $("#pickColor");
 
@@ -25,18 +24,13 @@ gridCanvas.on("dblclick", "td", function () {
 });
 
 gridCanvas.on("click", "td", function () {
-  $(this).css("background-color", color);
+  $(this).css("background-color", pickColor.val());
 });
 
 //To reset the canvas, so that user can start from a new one
 $("#reset").click(function () {
   gridCanvas.empty();
   pickColor.val("");
-});
-
-//To change the color, picked by color-picker
-pickColor.change("color", function () {
-  color = pickColor.val();
 });
 
 var mouseDown;
@@ -48,7 +42,7 @@ $("body").mousedown(function () {
 
 gridCanvas.on("mousemove", "td", function () {
   if (mouseDown) {
-    $(this).css("background-color", color);
+    $(this).css("background-color", pickColor.val());
   }
 
 });
