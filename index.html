@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Pixel Art Maker!</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!--For Header on top -->
+  <div class="header">
+    <h1>
+      ..Pixel Art Maker..
+    </h1>
+  </div>
+
+  <!-- For selecting options from left -->
+  <div class="options">
+    <h2>
+      Choose Grid Size
+    </h2>
+    <form id="sizePicker">
+      <b class="gridHeightWidth">Grid Height :</b> <br>
+      <input type="number" id="inputHeight" name="height" min="1" value="20" maxlength="3">
+      <br>
+      <b class="gridHeightWidth">Grid Width :</b> <br>
+      <input type="number" id="inputWidth" name="width" min="1" value="15" maxlength="3">
+    </form>
+
+    <h2>
+      Pick A Color
+    </h2>
+
+    <input type="color" id="pickColor">
+
+    <form>
+      <input class="submitResetBtn" id="submit" type="submit" value="Submit">
+      <input class="submitResetBtn" id="reset" type="submit" value="Reset">
+    </form>
+
+    <em> * Select grid height and width, then start dooodling.</em>
+
+  </div>
+
+  <!-- For the canvas part -->
+  <div class="canvas">
+    <h2>
+      Doooodle over here !
+    </h2>
+
+    <table id="gridCanvas">
+
+    </table>
+
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+  </script>
+
+  <script src="design.js"></script>
+</body>
+
+</html>
